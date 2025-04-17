@@ -1,0 +1,39 @@
+
+                            # Weather App Setup Instructions
+
+
+## 1. Install the `requests` library
+
+Make sure you have Python installed. Then open your terminal or command prompt and run:
+'''
+pip install requests
+```
+
+
+## 2. Get an API Key from OpenWeatherMap
+
+1. Go to https://openweathermap.org/api
+2. Click on "Sign Up" (or "Sign In" if you already have an account)
+3. After logging in, go to https://home.openweathermap.org/api_keys
+4. Copy the API key listed there
+
+
+## 3. Inputs Required
+
+- **City Name**: You will be asked to enter a city name to check the weather (e.g., "Colombo", "New York").
+- **API Key**: Replace `YOUR_API_KEY` in the code with your actual API key.
+
+
+## 4. Sample API Request (in code)
+
+```python
+import requests
+
+city_name = "London"
+api_key = "YOUR_API_KEY"  # Replace with your API key
+
+response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric")
+data = response.json()
+
+print(data)
+```

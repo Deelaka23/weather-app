@@ -4,7 +4,7 @@ import requests
 city_name = input("Enter the City name:  ".capitalize())
 
 # Define your API key
-api = "8b67c922030522929bc7c01153a47c14"
+api = "your API key"
 
 # Make the API request
 s_request = requests.get(
